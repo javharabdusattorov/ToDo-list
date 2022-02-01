@@ -11,6 +11,27 @@ body {
   padding: 200px 0;
 }
 
+/* Scroll-style */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;
+}
+
+.result__li::-webkit-scrollbar {
+  display: none;
+}
+
+.result__li {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;
+}
+
+/* scroll-end */
+
 .form__container {
   background: rgba(255, 250, 250, 0.692);
   padding: 30px 50px;
@@ -65,6 +86,7 @@ body {
   transition: all 0.5s ease;
   font-family: "Inconsolata", monospace;
   font-weight: 550;
+  overflow: auto;
 }
 
 /* .result__li:hover {
