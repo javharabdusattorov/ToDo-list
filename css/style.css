@@ -82,11 +82,9 @@ body {
   border-radius: 10px;
   font-size: 20px;
   color: crimson;
-  margin-top: 10px;
   transition: all 0.5s ease;
   font-family: "Inconsolata", monospace;
   font-weight: 550;
-  overflow: auto;
 }
 
 /* .result__li:hover {
@@ -95,3 +93,13 @@ body {
     border-top: 3px solid rgba(243, 47, 47, 0.897);
     border-bottom: transparent;
 } */
+
+@media(max-width:367px) {
+  .form__container {
+    padding: 20px 25px;
+  }
+
+  .result__li {
+    width: 100%;
+  }
+}
