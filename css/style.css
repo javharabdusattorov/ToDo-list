@@ -1,38 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@500&family=IBM+Plex+Sans+Thai+Looped&family=Inconsolata:wght@500&family=M+PLUS+1:wght@600&family=Mukta&family=Nunito:wght@200;300;400;500;600&family=Palette+Mosaic&family=Poppins:wght@300;400;800&family=Press+Start+2P&family=Roboto&family=Smooch+Sans:wght@800&family=Supermercado+One&family=Work+Sans:wght@500&display=swap'); 
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box !important;
-  /* list-style: none !important; */
   text-decoration: none !important;
 }
 
 body {
   background: url("../img/giphy.gif") no-repeat center center / cover;
-  padding: 200px 0;
+  padding: 100px 0;
 }
+
 
 /* Scroll-style */
 body::-webkit-scrollbar {
   display: none;
 }
-
 body {
   -ms-overflow-style: none;  
   scrollbar-width: none;
 }
-
-.result__li::-webkit-scrollbar {
+.result-box::-webkit-scrollbar {
   display: none;
 }
-
-.result__li {
+.result-box {
   -ms-overflow-style: none;  
   scrollbar-width: none;
 }
-
 /* scroll-end */
 
-.form__container {
+
+.container {
   background: rgba(255, 250, 250, 0.692);
   padding: 30px 50px;
   border-radius: 20px;
@@ -47,52 +46,77 @@ body {
 }
 
 .form__input,
-.form__input-two {
+.form__input-two, .form__input-three {
   font-family: "Work Sans", sans-serif;
+  border-radius: 3px;
+}
+
+.form__input-three {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.form__input-two {
+  width: 50%;
 }
 
 .enter__btn {
   margin-top: 20px;
-  padding: 6px 25px 8px 25px;
+  padding: 6px 25px 6.5px 25px;
   margin-top: 1px;
   font-family: "IBM Plex Sans Thai Looped", sans-serif;
+  border-radius: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 .result__heading {
   font-size: 20px;
   color: tomato;
   font-family: "IBM Plex Sans Thai Looped", sans-serif;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 15px;
   font-weight: 700;
 }
 
-.result__li {
-  width: 40%;
-  margin: 0 auto;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.013),
-    rgba(255, 255, 255, 0),
-    rgba(240, 222, 63, 0.945),
-    rgba(240, 222, 63, 0.945)
-  );
-  padding: 10px 0;
-  border-bottom: 3px solid rgba(243, 47, 47, 0.897);
-  border-radius: 10px;
+.result-box {
+  width: 50%;
+  margin: 20px auto;
   font-size: 20px;
-  color: crimson;
   transition: all 0.5s ease;
   font-family: "Inconsolata", monospace;
   font-weight: 550;
 }
 
-/* .result__li:hover {
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.013),
-    rgba(255, 255, 255, 0), rgba(240, 222, 63, 0.945),  rgba(240, 222, 63, 0.945));
-    border-top: 3px solid rgba(243, 47, 47, 0.897);
-    border-bottom: transparent;
-} */
+.result-title {
+  background-color: rgb(67, 161, 255);
+  font-size: 20px;
+  color: whitesmoke;
+  padding: 12px 17px;
+  display: flex;
+  justify-content: space-between;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  font-family: 'Work Sans', sans-serif;
+  cursor: pointer;
+}
+
+.result-description {
+  background-color: #f3f3f3;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: indigo;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  font-family: 'Work Sans', sans-serif;
+  display: none;
+}
+
+.edit-icon, .delete-icon { 
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 10px;
+}
 
 @media(max-width:367px) {
   .form__container {
